@@ -12,8 +12,7 @@ license: MIT
 theme: jekyll-theme-hacker
 show_downloads: false
 google_analytics: UA-00000-1
-sass:
-  style: compressed
+
 
 exclude:
   [
