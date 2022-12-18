@@ -1,7 +1,7 @@
 {
-  "name": "de4js",
+  "name": "My-Obfuscator",
   "version": "1.12.0",
-  "description": "JavaScript Deobfuscator and Unpacker",
+  "description": "My-Obfuscator",
   "main": "main.js",
   "scripts": {
     "build": "bundle exec jekyll build && workbox generateSW workbox-config.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lelinhtinh/de4js.git"
+    "url": "git+https://github.com/GoojDex/My-Obfuscator.git"
   },
   "keywords": [
     "deobfuscator",
@@ -24,15 +24,15 @@
     "javascript",
     "online-tools"
   ],
-  "author": "Zzbaivong",
+  "author": "Dev Chandel",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lelinhtinh/de4js/issues"
+    "url": "https://github.com/GoojDex/My-Obfuscator/issues"
   },
-  "homepage": "https://lelinhtinh.github.io/de4js/",
+  "homepage": "https://goojdex.github.io/My-Obfuscator/",
   "funding": {
     "type": "opencollective",
-    "url": "https://opencollective.com/de4js"
+    "url": "https://opencollective.com/My-Obfuscator"
   },
   "devDependencies": {
     "eslint-plugin-frontmatter": "0.0.8",
