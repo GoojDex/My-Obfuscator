@@ -1,12 +1,12 @@
 {
-  "name": "de4js",
-  "short_name": "de4js",
-  "description": "JavaScript Deobfuscator and Unpacker",
+  "name": "My-Obfuscator",
+  "short_name": "My-Obfuscator",
+  "description": "My-Obfuscator",
   "theme_color": "#b5e853",
   "background_color": "#151515",
   "display": "standalone",
-  "scope": "/de4js/",
-  "start_url": "/de4js/",
+  "scope": "/My-Obfuscator/",
+  "start_url": "/My-Obfuscator/",
   "icons": [
     {
       "src": "assets/images/icons/icon-72x72.png",
