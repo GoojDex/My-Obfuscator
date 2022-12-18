@@ -1,17 +1,17 @@
-name: My-Obfuscator
-title: My-Obfuscator
-description: My-Obfuscator JavaScript Deobfuscator and Unpacker
+name: de4js
+title: de4js
+description: JavaScript Deobfuscator and Unpacker
 version: 1.12.0
-author: Dev Chandel
-author_email: dev@gmail.com
-url: https://goojdex.github.io
-baseurl: /My-Obfuscator
-repository: GoojDex/My-Obfuscator
+author: Zzbaivong
+author_email: Zzbaivong@gmail.com
+url: https://lelinhtinh.github.io
+baseurl: /de4js
+repository: lelinhtinh/de4js
 license: MIT
 
 theme: jekyll-theme-hacker
 show_downloads: false
-google_analytics: UA-000-1
+google_analytics: UA-106940288-1
 sass:
   style: compressed
 
