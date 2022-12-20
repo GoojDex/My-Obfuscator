@@ -39,113 +39,95 @@
         {% if site.show_downloads %}
         <a href="{{ site.github.zip_url }}" class="btn">Download as .zip</a>
         <a href="{{ site.github.tar_url }}" class="btn">Download as .tar.gz</a> {% endif %}
-        <a href="{{ site.github.repository_url }}" target="_blank" class="btn btn-github">
-          <span class="icon"></span>
-          View on GitHub
-        </a>
+       
       </section>
     </div>
   </header>
 
   <div class="container">
     <section id="main_content">
-      <div class="tabs">
-        <div class="tab active" data-target="String">String</div>
-        <div class="tab" data-target="Local">Local File</div>
-        <div class="tab" data-target="Remote">Remote File</div>
-      </div>
-      <div class="cf"></div>
-      <div class="tabs-contents">
-        <div class="tab-content show" id="contentString">
-          <textarea id="input" class="content" rows="7" placeholder="Paste code here..."></textarea>
-        </div>
-        <div class="tab-content" id="contentLocal">
-          <div class="box">
-            <input type="file" name="file" id="file" class="inputfile" accept="text/javascript,text/plain">
-            <label for="file" class="read-only">
-              <span id="fileName"></span>
-              <strong>Choose a file…</strong>
-            </label>
-          </div>
-          <pre id="renderLocal" class="render read-only"></pre>
-        </div>
-        <div class="tab-content" id="contentRemote">
-          <form class="form-wrapper cf" id="formRemove">
-            <input type="url" placeholder="Enter a URL" id="urlRemove" required>
-            <button type="submit" class="btn" id="submitRemove">Submit</button>
-          </form>
-          <small>Cross-origin requests require Access-Control-Allow-Origin header</small>
-          <pre id="renderRemove" class="render read-only"></pre>
-        </div>
-      </div>
+      <div class="clear w-100" id="premerge"><div class="w-50 left main"><textarea class="cssmin-in" id="input_colA" value=""></textarea></div><div class="w-50 left main"><textarea class="cssmin-out" id="input_colB" style="border-left: 0px;" value=""></textarea><div class="clipboard" style="margin-top: 2.4%;"><span aria-label="Click to copy" class="tooltipped tooltipped-n"><i class="i-copy"></i></span></div></div><div class="clear"><div class="right xs-100 xs-left"><button class="btn btn-sm btn-light xs-50 xs-left" id="clearAll" type="button">Clear</button><button class="btn btn-sm xs-50 xs-leftt" id="obfuscate" type="button">Obfuscate</button></div></div></div><div class="none" id="merged"><div id="main"><textarea id="output_text"></textarea><div class="clipboard"><span aria-label="Click to copy" class="tooltipped tooltipped-n"><i class="i-copy"></i></span></div></div><div class="clear"><span class="left hidden-xs-down" id="instances"></span><div class="right xs-100"><button class="btn btn-sm xs-100 xs-right" id="startOver" type="button">Go Back</button></div></div></div><div class="clear w-100 margin-y">
+  </div><br />
 
-      <div class="config tab-content show">
-        <form name="de4js">
-          <div class="methods-wrap">
-            <input id="none" class="magic-radio" type="radio" value="" name="encode" checked>
-            <label for="none">None</label>
-            {% for opt in site.data.methods %}
-            <input id="{{ opt.key }}" class="magic-radio de4js-method" type="radio" value="{{ opt.key }}" name="encode">
-            <label for="{{ opt.key }}">{{ opt.name }}</label>
-            {% endfor %}
-            <input id="nicify" class="magic-radio" type="radio" value="nicify" name="encode" disabled>
-            <label for="nicify">
-              <a href="https://github.com/lelinhtinh/de4js/blob/master/README.md#helper" target="_blank"
-                class="help">Unreadable</a>
-            </label>
-          </div>
-          <div class="options-wrap">
-            {% for opt in site.data.options %}
-            <input id="{{ opt.key }}" class="magic-checkbox de4js-option" type="checkbox" value="yes"
-              name="{{ opt.key }}" {% if opt.checked %} checked {% endif %}>
-            <label for="{{ opt.key }}">{{ opt.name }}</label>
-            {% endfor %}
-          </div>
-        </form>
-      </div>
 
-      <div class="center">
-        <button id="clear" class="btn" type="reset">
-          Clear
-        </button>
-        <button id="auto" class="btn" type="button">
-          Auto Decode
-        </button>
-      </div>
 
-      <div class="view-wrap">
-        <div class="view-control">
-          <button id="copyjs" class="btn" type="button">
-            <img class="btn-icon" src="{{ 'assets/images/buttons/copy-document.png' | relative_url }}"
-              alt="Copy to clipboard">
-          </button>
-          <a id="download" class="btn" type="button" href="#" download="result.js">
-            <img class="btn-icon" src="{{ 'assets/images/buttons/download.png' | relative_url }}" alt="Download file">
-          </a>
-          <a id="preview" class="btn" type="button" href="#">
-            <img class="btn-icon" src="{{ 'assets/images/buttons/external-link-symbol.png' | relative_url }}"
-              alt="Open in new tab">
-          </a>
-        </div>
-        <textarea id="readable"></textarea>
-        <pre id="view" class="hljs"></pre>
-      </div>
+
+  
+  <script>
+   window.document.getElementById("ma50").parentNode.removeChild(window.document.getElementById("ma50")),
+    function (s, l) {
+        function e(e) {
+            e && ma50.nextFunction()
+        }
+        var c = s.document,
+            o = ["i", "s", "u"];
+        e.prototype = {
+            rand: function (e) {
+                return Math.floor(Math.random() * e)
+            },
+            getElementBy: function (e, t) {
+                return e ? c.getElementById(e) : c.getElementsByTagName(t)
+            },
+            getStyle: function (e) {
+                var t = c.defaultView;
+                return t && t.getComputedStyle ? t.getComputedStyle(e, null) : e.currentStyle
+            },
+            deferExecution: function (e) {
+                setTimeout(e, 2e3)
+            },
+            insert: function (e, t) {
+                var n = c.createElement("span"),
+                    a = c.body,
+                    d = a.childNodes.length,
+                    o = a.style,
+                    i = 0,
+                    r = 0;
+                if ("ma50" == t) {
+                    for (n.setAttribute("id", t), o.margin = o.padding = 0, o.height = "100%", d = this.rand(d); i < d; i++) 1 == a.childNodes[i].nodeType && (r = Math.max(r, parseFloat(this.getStyle(a.childNodes[i]).zIndex) || 0));
+                    r && (n.style.zIndex = r + 1), d++
+                }
+                n.innerHTML = e, a.insertBefore(n, a.childNodes[d - 1])
+            },
+            
+            
+                    o = this,
+                    i = o.getElementBy(0, "script"),
+                    r = i.length - 1;
+                for (c.write = null, c.writeln = null; 0 <= r; --r)
+                    if (d[e = i[r].src.substr(7, 20)] !== l) return (n = c.createElement("script")).type = "text/javascript", n.src = i[r].src, s[t = d[e]] = l, n.onload = n.onreadystatechange = function () {
+                        a = this, s[t] !== l || a.readyState && "loaded" !== a.readyState && "complete" !== a.readyState || (s[t] = n.onload = n.onreadystatechange = null, i[0].parentNode.removeChild(n))
+                    }, i[0].parentNode.insertBefore(n, i[0]), void o.deferExecution(function () {
+                        if (s[t] === l) return $("html").css("overflow", "hidden");
+                        o.displayMessage(n.src), o.nextFunction()
+                    });
+                o.nextFunction()
+            },
+            
+            nextFunction: function () {
+                var e = o[0];
+                e !== l && (o.shift(), this[e]())
+            }
+        }, s.ma50 = ma50 = new e, c.addEventListener ? s.addEventListener("load", e, !1) : s.attachEvent("onload", e)
+    }(window)
+  </script>
+  
+ 
+  
+  
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/javascript-obfuscator/dist/index.browser.js"></script>
+  <script src="https://blackhackertools.com/js/html-obfuscator.js"></script>
     </section>
 
     <footer id="footer">
-      <section class="sponsors">
-        <h3>Sponsors</h3>
-        <p>Secure stores, happy shoppers. We are <a href="https://sansec.io/" target="_blank"
-            rel="noopener noreferrer">Sansec</a>.</p>
-      </section>
-      <section class="credits">
-        <h3>Credits</h3>
-        <p>Project maintained by <a href="https://github.com/lelinhtinh" title="lelinhtinh">lelinhtinh</a>
-          <br>Hosted on GitHub Pages
-        </p>
-        <p>Icons made by <a target="_blank" href="https://www.flaticon.com/free-icon/artificial-intelligence_653469"
-            title="Eucalyp">Eucalyp</a></p>
-      </section>
+     <marquee class="GeneratedMarquee" direction="left" scrollamount="4" behavior="scroll">Welcome To Dev Chandel, Web Development & Design, Training Services, Android Application Development, Software Development, Designing Services, Digital Marketing Services, Bookkeeping Services, Consultancy Services, Training Services, IT Support, Digital Printing Services, Much More Services Provided By Dev Chandel.</marquee>
+     
+       <p> <center> <div class='text-center small'>
+          Copyright &#169; <script type='text/javascript'>var creditsyear = new Date();document.write(creditsyear.getFullYear());</script> 
+<a expr:href='data:blog.homepageUrl'><data:blog.title/></a>  All Right Reserved.  Designed By <a href='https://devchandel-goojdex.blogspot.com/' rel='dofollow'target="_blank"><font color='red'>  Dev Chandel</font></a>   </div> </center>
+      </p>  
     </footer>
   </div>
 
