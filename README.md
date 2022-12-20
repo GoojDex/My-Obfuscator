@@ -1,8 +1,8 @@
-# de4js
+# My-Obfuscator
 
 ![Logo](assets/images/icons/icon-128x128.png)
 
-JavaScript Deobfuscator and Unpacker
+My JavaScript obfuscator and packer
 
 ## Helper
 
