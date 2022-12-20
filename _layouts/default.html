@@ -50,7 +50,9 @@
      <div class="clear w-100" id="premerge"><div class="w-50 left main"><textarea class="cssmin-in" id="input_colA" value=""></textarea></div><div class="w-50 left main"><textarea class="cssmin-out" id="input_colB" style="border-left: 0px;" value=""></textarea><div class="clipboard" style="margin-top: 2.4%;"><span aria-label="Click to copy" class="tooltipped tooltipped-n"><i class="i-copy"></i></span></div></div><div class="clear"><div class="right xs-100 xs-left"><button class="btn btn-sm btn-light xs-50 xs-left" id="clearAll" type="button">Clear</button><button class="btn btn-sm xs-50 xs-leftt" id="obfuscate" type="button">Obfuscate</button></div></div></div><div class="none" id="merged"><div id="main"><textarea id="output_text"></textarea><div class="clipboard"><span aria-label="Click to copy" class="tooltipped tooltipped-n"><i class="i-copy"></i></span></div></div><div class="clear"><span class="left hidden-xs-down" id="instances"></span><div class="right xs-100"><button class="btn btn-sm xs-100 xs-right" id="startOver" type="button">Go Back</button></div></div></div><div class="clear w-100 margin-y">
   </div><br />
 <script type="text/javascript" src="{{ 'lib/mo.js' | relative_url }}"></script>
-
+<script type="text/javascript" src="{{ 'lib/jquery.min.js' | relative_url }}"></script>
+  <script type="text/javascript" src="{{ 'lib/index.browser.js' | relative_url }}"></script>
+  <script type="text/javascript" src="{{ 'lib/html-obfuscator.js' | relative_url }}"></script>
 
 
   
@@ -68,38 +70,11 @@
     </footer>
   </div>
 
-  <script type="text/javascript" src="{{ 'lib/jquery.min.js' | relative_url }}"></script>
-  <script type="text/javascript" src="{{ 'lib/index.browser.js' | relative_url }}"></script>
-  <script type="text/javascript" src="{{ 'lib/html-obfuscator.js' | relative_url }}"></script>
+  
   
 
   {% if site.environment == "production" or jekyll.environment == "production" %}
- <script type="module">
-    import { Workbox } from 'https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-window.prod.mjs';
 
-    if ('serviceWorker' in navigator) {
-      const wb = new Workbox("{{ 'sw.js' | relative_url }}");
-
-      wb.addEventListener('installed', (event) => {
-        if (!event.isUpdate) return;
-
-        caches.keys().then((cacheNames) =>
-          Promise.all(
-            cacheNames.map((cacheName) => {
-              console.log('Clear cache', cacheName);
-              return caches.delete(cacheName);
-            })
-          )
-        );
-
-        if (confirm('A new version is downloaded. Launch it?')) {
-          location.reload(true);
-        }
-      });
-
-      wb.register();
-    }
-  </script>
   {% endif %}
 </body>
 
