@@ -16,15 +16,12 @@ $special-disabled-color: #000000;
 }
 @import "magic-check/sass/magic-check.scss";
 
-body,
-textarea,
+
 code {
   font-family: 'Roboto Mono', monospace;
 }
 
-.container {
-  max-width: 1280px;
-}
+
 
 .content {
   box-sizing: border-box;
