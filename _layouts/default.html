@@ -1925,7 +1925,7 @@ footer a:hover {
     
     
     #output_text{height:522px}	#input_colA,#input_colB{height:456px;}	@media (max-width: 768px){	#output_text,#input_colA,#input_colB{height:400px}	}	@media (max-width: 414px){	#output_text,#input_colA,#input_colB{height:514px}	}	@media (max-width: 412px){	#output_text,#input_colA,#input_colB{height:509px}	}	@media (max-width: 384px){	#output_text,#input_colA,#input_colB{height:418px}	}	@media (max-width: 375px){	#output_text,#input_colA,#input_colB{height:445px}	}	@media (max-width: 360px){	#output_text,#input_colA,#input_colB{height:418px}	}	@media (max-width: 320px){	#output_text,#input_colA,#input_colB{height:346px}	}
- #ma50{position:fixed!important;position:absolute;top:-1px;top:expression((t=document.documentElement.scrollTop?document.documentElement.scrollTop:document.body.scrollTop)+"px");left:2px;width:105%;height:105%;background-color:#181d23;opacity:105;display:block;padding-top:20%}#ma50 *{text-align:center;margin:0 auto;display:block;filter:none;font:bold 14px Verdana,Arial,sans-serif;text-decoration:none}#ma50~*{display:none}
+
 	</style>
  
  
@@ -1965,7 +1965,10 @@ footer a:hover {
   <div class="container">
     <section id="main_content">
 	<hr>
- 
+ <div class="widget-body"><div class="clear xs-spacer-n xs-spacer-s"><div class="left"><div id="file_upload" class="dropdown"><button type="button" class="btn btn-sm dropdown-trigger"><i class="fa fa-folder-open-o"></i>File</button><div class="dropdown-menu"><span class="file-button"><input type="file" id="upload_colA" onchange="loadTextA()" accept=".css"><label for="upload_colA">Load</label><label for="file_download">Save</label></span></div></div></div><button id="file_download" type="button" class="btn btn-sm none"><i class="fa fa-save"></i> Save</button>
+    <div class="right"><span class="switch left"><input type="checkbox" id="isEmpty"></span></div></div>
+    <div class="clear spacer-n" id="options"></div>
+	 
   <div class="clear w-100" id="premerge">
     <div class="w-50 left main">
       <textarea class="cssmin-in" id="input_colA" value=""></textarea></div>
@@ -1984,7 +1987,55 @@ footer a:hover {
     <div class="right xs-100">
       <button class="btn btn-sm xs-100 xs-right" id="startOver" type="button">Go Back</button></div></div></div>
 	
-  
+  <script >
+var font = localStorage.getItem("ta_font");
+$("#main textarea, .main textarea, .widget-body input").css("font-family", font);
+var size = localStorage.getItem("ta_size");
+$(".widget-body textarea").css("font-size", size);
+var spellcheck = JSON.parse(localStorage.getItem("ta_spellcheck"));
+$(".widget-body textarea, .widget-body input").attr("spellcheck", spellcheck);
+var textwrap = JSON.parse(localStorage.getItem("ta_textwrap"));
+
+function Alert(t) {
+    $(".alert-content").html(t), $(".alert").show()
+}
+
+function Toast(t) {
+    $(".toast-content").html(t), $(".toast").show().delay(2e3).fadeOut(250)
+}
+
+function Clipboard(t) {
+    t.select().focus(), document.execCommand("copy"), Toast("Copied to Clipboard")
+}
+
+function default_settings() {
+    localStorage.setItem("ta_language", "English"), localStorage.setItem("ta_theme", "Light"), localStorage.setItem("ta_font", "Roboto"), localStorage.setItem("ta_size", "15px"), localStorage.setItem("ta_spellcheck", !1), localStorage.setItem("ta_textwrap", !0), localStorage.setItem("ta_examples", !0)
+}
+0 == textwrap && $(".widget-body textarea").addClass("wrap-off"), $("#app_menu").click(function () {
+    $("#nav-menu").toggleClass("open"), $(".mask").addClass("active")
+}), $("body").mouseup(function (t) {
+    0 === $(t.target).closest("#nav-menu").length && ($("#nav-menu").removeClass("open"), $(".mask").removeClass("active"))
+}), $(".accordion>li>a:not(:only-child)").click(function (t) {
+    var e = $(this).closest("li").find("ul");
+    $(this).closest(".accordion").find("ul").not(e).slideUp(100), $(this).hasClass("active") ? $(this).removeClass("active") : ($(this).closest(".accordion").find("a.active").removeClass("active"), $(this).addClass("active")), e.stop(!1, !0).slideToggle(100), t.preventDefault()
+}), $("body").ready(function () {
+    $(document).on("click", ".dropdown-trigger", function (t) {
+        $(this).siblings().show(), $(this).parent().siblings().each(function (t, e) {
+            $(e).find(".dropdown-menu").hide()
+        })
+    })
+}), $("body").mouseup(function (t) {
+    var e = $(".dropdown-menu");
+    e.is(t.target) || e.hide()
+}), $(".alert-x").click(function () {
+    $(".alert").hide()
+}), $("#share_this").click(function () {
+    var t = window.location.href;
+    return window.open("https://www.addtoany.com/share#url=" + escape(t), "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=670"), !1
+}), $('a[href="#"]').click(function (t) {
+    t.preventDefault ? t.preventDefault() : t.returnValue = !1
+}), localStorage.getItem("ta_language") || default_settings();
+</script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/GoojDex/safe@main/HTML_Obfuscator.js"></script>
 
 <div class="center-align" id="credits" style="text-align: center;">Powered by <a class="teal-text" href="https://goojdextools.blogspot.com/" id="creditlink" rel="dofollow" target="_blank">Dev Chandel</a></div><div class="center-align" style="text-align: center;"></div>
