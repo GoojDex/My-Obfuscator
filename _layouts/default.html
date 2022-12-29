@@ -8,7 +8,8 @@
   <meta name="google-site-verification" content="#">
   <link rel="icon" href="favicon.ico">
   <link rel="manifest" href="manifest.webmanifest">
- <link href="https://fonts.googleapis.comcss?family=Roboto:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.comcss?family=Roboto:300,400,500" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" rel="stylesheet">
   <style>
     @font-face {
 	font-family: icons;
@@ -270,9 +271,11 @@ i {
 .i-asterisk:before {
 	content: "\2731"
 }
-  </style>
- <style>
-   html {
+    
+    
+ 
+    
+    html {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	
@@ -1915,13 +1918,21 @@ footer a:hover {
 		display: none
 	}
 }
-  </style>
-
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" rel="stylesheet">
-  <style>
-    #output_text{height:300px}	#input_colA,#input_colB{height:300px;}	@media (max-width: 500px){	#output_text,#input_colA,#input_colB{height:300px}	}	@media (max-width: 414px){	#output_text,#input_colA,#input_colB{height:300px}	}	@media (max-width: 412px){	#output_text,#input_colA,#input_colB{height:300px}	}	@media (max-width: 384px){	#output_text,#input_colA,#input_colB{height:300px}	}	@media (max-width: 375px){	#output_text,#input_colA,#input_colB{height:300px}	}	@media (max-width: 360px){	#output_text,#input_colA,#input_colB{height:300px}	}	@media (max-width: 320px){	#output_text,#input_colA,#input_colB{height:300px}	}
- #ma50{position:fixed!important;position:absolute;top:-1px;top:expression((t=document.documentElement.scrollTop?document.documentElement.scrollTop:document.body.scrollTop)+"px");left:2px;width:105%;height:60%;background-color:#181d23;opacity:105;display:block;padding-top:20%}#ma50 *{text-align:center;margin:0 auto;display:block;filter:none;font:bold 14px Verdana,Arial,sans-serif;text-decoration:none}#ma50~*{display:none}
+    
+    
+    
+    
+    
+    #output_text{height:522px}	#input_colA,#input_colB{height:456px;}	@media (max-width: 768px){	#output_text,#input_colA,#input_colB{height:400px}	}	@media (max-width: 414px){	#output_text,#input_colA,#input_colB{height:514px}	}	@media (max-width: 412px){	#output_text,#input_colA,#input_colB{height:509px}	}	@media (max-width: 384px){	#output_text,#input_colA,#input_colB{height:418px}	}	@media (max-width: 375px){	#output_text,#input_colA,#input_colB{height:445px}	}	@media (max-width: 360px){	#output_text,#input_colA,#input_colB{height:418px}	}	@media (max-width: 320px){	#output_text,#input_colA,#input_colB{height:346px}	}
+ #ma50{position:fixed!important;position:absolute;top:-1px;top:expression((t=document.documentElement.scrollTop?document.documentElement.scrollTop:document.body.scrollTop)+"px");left:2px;width:105%;height:105%;background-color:#181d23;opacity:105;display:block;padding-top:20%}#ma50 *{text-align:center;margin:0 auto;display:block;filter:none;font:bold 14px Verdana,Arial,sans-serif;text-decoration:none}#ma50~*{display:none}
+    
+    
+    
+    
 </style>
+ 
+ 
+ 
   {% seo %}
 
   {% if site.google_analytics %}
@@ -1958,79 +1969,30 @@ footer a:hover {
 <br><br><br>
   <div class="container">
     <section id="main_content">
-      <div class="clear w-100" id="premerge"><div class="w-50 left main"><textarea class="cssmin-in" id="input_colA" value=""></textarea></div><div class="w-50 left main"><textarea class="cssmin-out" id="input_colB" style="border-left: 0px;" value=""></textarea><div class="clipboard" style="margin-top: 2.4%;"><span aria-label="Click to copy" class="tooltipped tooltipped-n"><i class="i-copy"></i></span></div></div><div class="clear"><div class="right xs-100 xs-left"><button class="btn btn-sm btn-light xs-50 xs-left" id="clearAll" type="button">Clear</button><button class="btn btn-sm xs-50 xs-leftt" id="obfuscate" type="button">Obfuscate</button></div></div></div><div class="none" id="merged"><div id="main"><textarea id="output_text"></textarea><div class="clipboard"><span aria-label="Click to copy" class="tooltipped tooltipped-n"><i class="i-copy"></i></span></div></div><div class="clear"><span class="left hidden-xs-down" id="instances"></span><div class="right xs-100"><button class="btn btn-sm xs-100 xs-right" id="startOver" type="button">Go Back</button></div></div></div><div class="clear w-100 margin-y">
-  </div>
-
-
-
-
-  
- <script>
-   window.document.getElementById("ma50").parentNode.removeChild(window.document.getElementById("ma50")),
-    function (s, l) {
-        function e(e) {
-            e && ma50.nextFunction()
-        }
-        var c = s.document,
-            o = ["i", "s", "u"];
-        e.prototype = {
-            rand: function (e) {
-                return Math.floor(Math.random() * e)
-            },
-            getElementBy: function (e, t) {
-                return e ? c.getElementById(e) : c.getElementsByTagName(t)
-            },
-            getStyle: function (e) {
-                var t = c.defaultView;
-                return t && t.getComputedStyle ? t.getComputedStyle(e, null) : e.currentStyle
-            },
-            deferExecution: function (e) {
-                setTimeout(e, 2e3)
-            },
-            insert: function (e, t) {
-                var n = c.createElement("span"),
-                    a = c.body,
-                    d = a.childNodes.length,
-                    o = a.style,
-                    i = 0,
-                    r = 0;
-                if ("ma50" == t) {
-                    for (n.setAttribute("id", t), o.margin = o.padding = 0, o.height = "100%", d = this.rand(d); i < d; i++) 1 == a.childNodes[i].nodeType && (r = Math.max(r, parseFloat(this.getStyle(a.childNodes[i]).zIndex) || 0));
-                    r && (n.style.zIndex = r + 1), d++
-                }
-                n.innerHTML = e, a.insertBefore(n, a.childNodes[d - 1])
-            },
-            
-            
-                    o = this,
-                    i = o.getElementBy(0, "script"),
-                    r = i.length - 1;
-                for (c.write = null, c.writeln = null; 0 <= r; --r)
-                    if (d[e = i[r].src.substr(7, 20)] !== l) return (n = c.createElement("script")).type = "text/javascript", n.src = i[r].src, s[t = d[e]] = l, n.onload = n.onreadystatechange = function () {
-                        a = this, s[t] !== l || a.readyState && "loaded" !== a.readyState && "complete" !== a.readyState || (s[t] = n.onload = n.onreadystatechange = null, i[0].parentNode.removeChild(n))
-                    }, i[0].parentNode.insertBefore(n, i[0]), void o.deferExecution(function () {
-                        if (s[t] === l) return $("html").css("overflow", "hidden");
-                        o.displayMessage(n.src), o.nextFunction()
-                    });
-                o.nextFunction()
-            },
-            
-            nextFunction: function () {
-                var e = o[0];
-                e !== l && (o.shift(), this[e]())
-            }
-        }, s.ma50 = ma50 = new e, c.addEventListener ? s.addEventListener("load", e, !1) : s.attachEvent("onload", e)
-    }(window)
-  </script>
-  
+	<h1>HTML Obfuscator</h1><hr>
  
+  <div class="clear w-100" id="premerge">
+    <div class="w-50 left main">
+      <textarea class="cssmin-in" id="input_colA" value=""></textarea></div>
+    <div class="w-50 left main">
+      <textarea class="cssmin-out" id="input_colB" style="border-left: 0px;" value=""></textarea>
+      <div class="clipboard" style="margin-top: 2.4%;">
+        <span aria-label="Click to copy" class="tooltipped tooltipped-n"><i class="i-copy"></i></span></div></div>
+    <div class="clear">
+      <div class="right xs-100 xs-left">
+        <button class="btn btn-sm btn-light xs-50 xs-left" id="clearAll" type="button">Clear</button>
+        <button class="btn btn-sm xs-50 xs-leftt" id="obfuscate" type="button">Obfuscate</button></div></div></div>
+<div class="none" id="merged">
+  <div id="main"><textarea id="output_text"></textarea>
+    <div class="clipboard"><span aria-label="Click to copy" class="tooltipped tooltipped-n"><i class="i-copy"></i></span></div></div>
+  <div class="clear"><span class="left hidden-xs-down" id="instances"></span>
+    <div class="right xs-100">
+      <button class="btn btn-sm xs-100 xs-right" id="startOver" type="button">Go Back</button></div></div></div><br />
+	
   
- 
-  
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/javascript-obfuscator/dist/index.browser.js"></script>
-	     <script src="https://blackhackertools.com/js/html-obfuscator.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/GoojDex/safe@main/HTML_Obfuscator.js"></script>
+
+<div class="center-align" id="credits" style="text-align: center;">Powered by <a class="teal-text" href="https://goojdextools.blogspot.com/" id="creditlink" rel="dofollow" target="_blank">Dev Chandel</a></div><div class="center-align" style="text-align: center;"><br /></div>
 
     </section><br /><br/><br/><br/>
 
