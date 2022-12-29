@@ -2,7 +2,7 @@
 
 ![Logo](assets/images/icons/icon-128x128.png)
 
-My JavaScript obfuscator and packer
+My JavaScript Obfuscator and Packer
 
 ## Helper
 
