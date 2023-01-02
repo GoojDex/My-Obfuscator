@@ -1,7 +1,7 @@
 {
   "name": "My-Obfuscator",
   "short_name": "My-Obfuscator",
-  "description": "My JavaScript Obfuscator and Packer",
+  "description": "My HTML Obfuscator and Packer",
   "theme_color": "#b5e853",
   "background_color": "#151515",
   "display": "standalone",
