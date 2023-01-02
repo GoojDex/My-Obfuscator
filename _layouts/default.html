@@ -53,9 +53,17 @@
   <div class="container">
     <section id="main_content">
 	
- <div class="widget-body"><div class="clear xs-spacer-n xs-spacer-s"><div class="left"><div id="file_upload" class="dropdown"><button type="button" class="btn btn-sm dropdown-trigger"><i class="fa fa-folder-open-o"></i>File</button><div class="dropdown-menu"><span class="file-button"><input type="file" id="upload_colA" onchange="loadTextA()" accept=".css"><label for="upload_colA">Load</label><label for="file_download">Save</label></span></div></div></div><button id="file_download" type="button" class="btn btn-sm none"><i class="fa fa-save"></i> Save</button>
-    <div class="right"><span class="switch left"><input type="checkbox" id="isEmpty"></span></div></div>
-    <div class="clear spacer-n" id="options"></div>
+ <div class="widget-body">
+  <div class="clear xs-spacer-n xs-spacer-s">
+    <div class="left"><div id="file_upload" class="dropdown">
+      <button type="button" class="btn btn-sm dropdown-trigger"><i class="fa fa-folder-open-o"></i>File</button>
+      <div class="dropdown-menu"><span class="file-button">
+        <input type="file" id="upload_colA" onchange="loadTextA()" accept=".css"><label for="upload_colA">Load</label>
+        <label for="file_download">Save</label></span></div></div></div>
+    <button id="file_download" type="button" class="btn btn-sm none"><i class="fa fa-save"></i> Save</button>
+    <div class="right"><span class="switch left">
+      <input type="checkbox" id="isEmpty"></span></div></div>
+  <div class="clear spacer-n" id="options"></div>
 	 
   <div class="clear w-100" id="premerge">
     <div class="w-50 left main">
@@ -75,8 +83,8 @@
     <div class="right xs-100">
       <button class="btn btn-sm xs-100 xs-right" id="startOver" type="button">Go Back</button></div></div></div>
 	
-  <script >
-var font = localStorage.getItem("ta_font");
+ <script >
+  var font = localStorage.getItem("ta_font");
 $("#main textarea, .main textarea, .widget-body input").css("font-family", font);
 var size = localStorage.getItem("ta_size");
 $(".widget-body textarea").css("font-size", size);
@@ -123,7 +131,7 @@ function default_settings() {
 }), $('a[href="#"]').click(function (t) {
     t.preventDefault ? t.preventDefault() : t.returnValue = !1
 }), localStorage.getItem("ta_language") || default_settings();
-</script>
+  </script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/GoojDex/safe@main/HTML_Obfuscator.js"></script>
 
 <div class="center-align" id="credits" style="text-align: center;">Powered by <a class="teal-text" href="https://goojdextools.blogspot.com/" id="creditlink" rel="dofollow" target="_blank">Dev Chandel</a></div><div class="center-align" style="text-align: center;"></div>
